@@ -31,7 +31,7 @@ class Banco
     @contas[contaOrigem.numero].sacar valor
     @contas[contaDestino.numero].depositar valor
 
-    @transferencias << Banco::TransferenciaInterna.new(contaOrigem,contaDestino,valor)
+    @transferencias << TransferenciaInterna.new(contaOrigem,contaDestino,valor)
 
     true
   end

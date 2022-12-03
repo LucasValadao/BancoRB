@@ -53,4 +53,15 @@ describe Conta do
     end
   end
 
+  describe '.mostrarSaldo' do
+
+    context 'Mostrando saldo' do
+      it 'Add 0' do
+        @conta.depositar(100)
+        @conta.mostrarSaldo
+        expect(@conta.mostrarSaldo).to be 100
+      end
+    end
+  end
+
 end

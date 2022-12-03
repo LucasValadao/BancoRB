@@ -20,4 +20,8 @@ class Conta
   def sacar valor
     @balanco -= valor
   end
+
+  def mostrarSaldo
+    return @balanco
+  end
 end

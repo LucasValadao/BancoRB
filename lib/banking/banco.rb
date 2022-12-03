@@ -19,4 +19,24 @@ class Banco
     client.addConta(conta)
     conta
   end
+
+  def transferirInterno contaOrigem, contaDestino, valor
+    raise "Erro de Transferencia - Conta Origem invalida" if @contas[contaOrigem.numero].nil?
+    raise "Erro de Transferencia - Conta Destino invalida" if @contas[contaDestino.numero].nil?
+
+    unless @@overdrawn
+      raise "Erro de Transferencia - Saldo insuficiente" if @contas[contaOrigem.numero].balanco < valor
+    end
+
+    @contas[contaOrigem.numero].sacar valor
+    @contas[contaDestino.numero].depositar valor
+
+    @transferencias << Banco::TransferenciaInterna.new(contaOrigem,contaDestino,valor)
+
+    true
+  end
+
+  def historicoTransferencia
+    @transferencias
+  end
 end

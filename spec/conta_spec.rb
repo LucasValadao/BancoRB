@@ -24,7 +24,7 @@ describe Conta do
         expect(@conta.balanco).to be 0
       end
 
-      it 'Return the balance of account before add 100' do
+      it 'Retorna o balanco da conta depois de add 100' do
         @conta.depositar(100)
         expect(@conta.balanco).to be 100
       end

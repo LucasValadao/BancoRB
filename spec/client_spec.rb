@@ -2,7 +2,7 @@
 
 require 'rspec'
 
-require './lib/banking'
+require './lib/caixa'
 
 
 

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rspec'
-require './lib/banking'
+require './lib/caixa'
 
 describe Conta do
 

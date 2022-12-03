@@ -1,4 +1,4 @@
-Dir["./lib/banking/*.rb"].each do |file|
+Dir["./lib/caixa/*.rb"].each do |file|
   require file
 end
 

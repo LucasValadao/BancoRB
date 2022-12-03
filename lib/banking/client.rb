@@ -3,7 +3,7 @@
 class Client
   attr_reader :nome, :contas
 
-  def initialize
+  def initialize nome
     @nome = nome
     @contas = []
   end
